@@ -1,0 +1,40 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=utf-8\n"
+"X-Generator: babel-plugin-makepot\n"
+
+#: src/custom-box/controls.js:38
+msgid "Invert colors"
+msgstr ""
+
+#: src/custom-box/index.js:21
+msgid "A Simple box that you can customizer from inspector"
+msgstr ""
+
+#: src/custom-box/index.js:28
+msgid "Custom box"
+msgstr ""
+
+#: src/custom-box/index.js:54
+msgid "Add content"
+msgstr ""
+
+#: src/custom-box/inspector.js:24
+msgid "Border Radius"
+msgstr ""
+
+#: src/custom-box/inspector.js:32
+msgid "Rotation"
+msgstr ""
+
+#: src/custom-box/inspector.js:40
+msgid "Colors"
+msgstr ""
+
+#: src/custom-box/inspector.js:47
+msgid "Background Color"
+msgstr ""
+
+#: src/custom-box/inspector.js:54
+msgid "Text Color"
+msgstr ""

@@ -10,6 +10,7 @@
     "build": "cross-env BABEL_ENV=default NODE_ENV=production webpack -p"
   },
   "devDependencies": {
+    "@wordpress/babel-plugin-makepot": "^2.1.2",
     "@wordpress/babel-preset-default": "^1.2.0",
     "babel-core": "^6.26.3",
     "babel-eslint": "^8.2.3",
