@@ -2,3 +2,5 @@
   padding: 1.2rem; }
   .wp-block-lcb-custom-box p:last-child {
     margin-bottom: 0; }
+  .entry-content .wp-block-lcb-custom-box {
+    margin-bottom: 1.2rem; }

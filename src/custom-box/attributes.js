@@ -17,7 +17,7 @@ const attributes = {
     },
     backgroundColor: {
         type: 'string',
-        default: '#fff'
+        default: '#ffffff'
     },
     textColor: {
         type: 'string',

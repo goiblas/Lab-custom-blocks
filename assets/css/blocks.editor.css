@@ -1,0 +1,10 @@
+.wp-block-lcb-resizable-box {
+  position: relative !important;
+  padding: 1.2rem;
+  background-color: #f4f4f4;
+  border: 1px solid rgba(0, 0, 0, 0.06); }
+  .wp-block-lcb-resizable-box p:last-child {
+    margin-bottom: 0; }
+  .wp-block-lcb-resizable-box.actived {
+    background-color: #c4f0f1;
+    z-index: 99999; }

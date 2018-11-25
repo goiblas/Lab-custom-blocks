@@ -11,7 +11,7 @@ import Inspector  from './inspector.js';
  */
 const { __ } = wp.i18n;
 const { registerBlockType } = wp.blocks;
-const { RichText, BlockControls, BlockAlignmentToolbar, AlignmentToolbar, InspectorControls, PanelBody, PanelRow, RangeControl } = wp.editor;
+const { RichText } = wp.editor;
 const { Fragment } = wp.element;
 
 export default registerBlockType(
@@ -60,9 +60,16 @@ export default registerBlockType(
             );
         },
         save: ({ attributes, className}) => {
-            const {content} = attributes;
+            const { content, textAlignment, borderRadius, backgroundColor, textColor, rotation } = attributes;
+            const styles = {
+                textAlign: textAlignment,
+                borderRadius: `${borderRadius}px`,
+                backgroundColor: backgroundColor,
+                color: textColor,
+                transform: `rotate(${rotation}deg)`
+            }
             return (
-                <div className={ className }>
+                <div className={ className }  style={ styles }>
                     <div className="lcb-content">
                         {content}
                     </div>

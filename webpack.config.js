@@ -30,7 +30,6 @@ const extractConfig = {
   ],
 };
 
-
 module.exports = {
   entry: {
     './assets/js/editor.blocks' : './src/index.js',
@@ -65,4 +64,9 @@ module.exports = {
     blocksCSSPlugin,
     editBlocksCSSPlugin,
   ],
+  stats: 'minimal',
+  externals: {
+		react: 'React',
+    'react-dom': 'ReactDOM',
+  }
 };

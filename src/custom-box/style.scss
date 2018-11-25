@@ -1,10 +1,9 @@
-$black: #222;
-$dark: #f7b733;
-$light: rgba(254, 243, 224, 0.52);
-
 .wp-block-lcb-custom-box {
     padding: 1.2rem;
     p:last-child {
         margin-bottom: 0;
+    }
+    .entry-content & {
+        margin-bottom: 1.2rem;
     }
 }

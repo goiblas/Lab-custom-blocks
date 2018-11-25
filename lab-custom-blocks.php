@@ -29,7 +29,7 @@ if (! defined('ABSPATH')) {
 function lcb_enqueue_block_editor_assets() {
 	// Make paths variables so we don't write em twice ;)
 	$block_path = '/assets/js/editor.blocks.js';
-    $style_path = '/assets/css/blocks.style.css';
+    $style_path = '/assets/css/blocks.editor.css';
     
     // Enqueue the bundled block JS file
 	wp_enqueue_script(
