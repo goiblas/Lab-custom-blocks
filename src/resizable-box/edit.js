@@ -1,7 +1,6 @@
 const { __ } = wp.i18n;
-const { Component, Fragment } = wp.element;
+const { Component } = wp.element;
 const { RichText } = wp.editor;
-
 
 import { Rnd } from 'react-rnd';
 import classNames from 'classnames';

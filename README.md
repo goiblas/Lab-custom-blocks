@@ -1,6 +1,6 @@
 # Ejemplo de bloques de gutenberg 
 
-## Enlaces de interes de interés
+## Enlaces de interés
 - https://svg2jsx.herokuapp.com/ ( Herramienta para transformar de los iconos SVG a JSX )
 
 ## Cómo empezar

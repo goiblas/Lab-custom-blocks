@@ -16,7 +16,7 @@ msgid "Custom box"
 msgstr ""
 
 #: src/custom-box/index.js:54
-#: src/resizable-box/edit.js:42
+#: src/resizable-box/edit.js:40
 msgid "Add content"
 msgstr ""
 
@@ -38,6 +38,10 @@ msgstr ""
 
 #: src/custom-box/inspector.js:54
 msgid "Text Color"
+msgstr ""
+
+#: src/google-maps/index.js:14
+msgid "Google maps block"
 msgstr ""
 
 #: src/resizable-box/index.js:14

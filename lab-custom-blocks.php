@@ -62,6 +62,14 @@ function lcb_enqueue_assets() {
 		[ 'wp-blocks' ],
 		filemtime(  plugin_dir_path( __FILE__ ) . $style_path )
 	);
+
+	$google_maps_api_key = 'AIzaSyCoq4_-BeKtYRIs-3FjJL721G1eP5DaU0g';
+
+	wp_enqueue_script(
+		'gutenberg-google-map',
+		'https://maps.googleapis.com/maps/api/js?key=' . $google_maps_api_key . '&libraries=places'
+	);
+
 }
 add_action( 'enqueue_block_assets', 'lcb_enqueue_assets' );
 

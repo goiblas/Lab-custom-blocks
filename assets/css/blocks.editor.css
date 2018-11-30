@@ -8,3 +8,7 @@
   .wp-block-lcb-resizable-box.actived {
     background-color: #c4f0f1;
     z-index: 99999; }
+.google-maps {
+  height: 240px;
+  position: relative;
+  background-color: #dddddd; }
