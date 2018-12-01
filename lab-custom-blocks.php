@@ -111,3 +111,10 @@ function lcb_custom_block_categories( $categories ) {
     );
 }
 add_filter( 'block_categories', 'lcb_custom_block_categories', 10, 2 );
+
+
+
+/**
+ * include Leaflet maps block 
+ */
+include __DIR__ . '/inc/leaflet-maps-block.php';

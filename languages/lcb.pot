@@ -40,8 +40,40 @@ msgstr ""
 msgid "Text Color"
 msgstr ""
 
-#: src/google-maps/index.js:14
+#: src/google-maps/edit.js:52
+msgid "Search Places ..."
+msgstr ""
+
+#: src/google-maps/edit.js:57
+msgid "Loading..."
+msgstr ""
+
+#: src/google-maps/index.js:16
 msgid "Google maps block"
+msgstr ""
+
+#: src/google-maps/index.js:24
+msgid "google map"
+msgstr ""
+
+#: src/google-maps/index.js:25
+msgid "map"
+msgstr ""
+
+#: src/leaflet-maps/index.js:12
+msgid "leaflet maps block"
+msgstr ""
+
+#: src/leaflet-maps/inspector.js:21
+msgid "Controles"
+msgstr ""
+
+#: src/leaflet-maps/inspector.js:22
+msgid "latitude"
+msgstr ""
+
+#: src/leaflet-maps/inspector.js:29
+msgid "longitude"
 msgstr ""
 
 #: src/resizable-box/index.js:14

@@ -68,5 +68,6 @@ module.exports = {
   externals: {
 		react: 'React',
     'react-dom': 'ReactDOM',
+    L: 'leaflet'
   }
 };

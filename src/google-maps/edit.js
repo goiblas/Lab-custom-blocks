@@ -1,10 +1,12 @@
-const { Component, Fragment } = wp.element;
-
+const { Component } = wp.element;
+const { __ } = wp.i18n;
 import PlacesAutocomplete, {
     geocodeByAddress,
     getLatLng,
 } from 'react-places-autocomplete';
 
+
+import GoogleMapsRender from './google-maps-render';
 
 export default class googleMapsEdit extends Component {
     constructor(){
@@ -47,18 +49,18 @@ export default class googleMapsEdit extends Component {
           <div>
             <input
               {...getInputProps({
-                placeholder: 'Search Places ...',
+                placeholder: __('Search Places ...', 'lcb'),
                 className: 'location-search-input',
               })}
             />
             <div className="autocomplete-dropdown-container">
-              {loading && <div>Loading...</div>}
+              {loading && <div>{__('Loading...', 'lcb')}</div>}
               {suggestions.map(suggestion => {
                 const className = suggestion.active
                   ? 'suggestion-item--active'
                   : 'suggestion-item';
-                // inline style for demonstration purpose
-                const style = suggestion.active
+
+                  const style = suggestion.active
                   ? { backgroundColor: '#fafafa', cursor: 'pointer' }
                   : { backgroundColor: '#ffffff', cursor: 'pointer' };
                 return (
@@ -77,15 +79,7 @@ export default class googleMapsEdit extends Component {
         )}
                 </PlacesAutocomplete>
                 { typeof latitute === "number" && typeof longitude === "number" ?
-                    <iframe
-                         width="100%"
-                         height="420px"
-                         src={`https://maps.google.com/maps?width=100%&height=600&hl=enq=''&q=${encodeURI(address)}&ll=${latitute},${longitude}&t=m&ie=UTF8&t=&z=14&iwloc=B&output=embed`}
-                         frameborder="0"
-                         scrolling="no"
-                         marginheight="0"
-                         marginwidth="0"
-                     ></iframe>
+                  <GoogleMapsRender {...this.props.attributes} />
                      : null
                 }
             </div>

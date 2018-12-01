@@ -4,17 +4,26 @@ const { registerBlockType } = wp.blocks;
 
 import './editor.scss';
 import edit from './edit';
+import GoogleMapsRender from './google-maps-render';
+import icon from './icon';
 
 /**
  * Register the gutenberg map block inside the embed category.
  * 
  * @since 1.0.0.
  */
-export default registerBlockType(  'lcb/google-maps', {
+export default registerBlockType( 'lcb/google-maps', {
     title:__('Google maps block', 'lcb'),
     description: __('', 'lcb'),
     category: 'lab-custom-blocks',
-    icon: 'location',
+    icon: {
+        background: '#eceff4',
+        src: icon
+    }, 
+    keywords: [
+        __( 'google map', 'lcb' ),
+        __( 'map', 'lcb' ),
+    ],
     attributes: {
         latitute: {
             type: "number",
@@ -24,16 +33,13 @@ export default registerBlockType(  'lcb/google-maps', {
         },
         address: {
             type: "string"
-        },
-        maptype: {
-            type: "string"
         }
     },
     edit,
-    save: props => {
+    save: ({className, attributes}) => {
         return (
-            <div className={props.className}>
-                <div>adios!</div>
+            <div className={className}>
+                <GoogleMapsRender {...attributes} />
             </div>
         )
     }
