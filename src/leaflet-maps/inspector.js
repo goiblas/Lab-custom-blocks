@@ -1,21 +1,19 @@
 const { __ } = wp.i18n;
 const { Component } = wp.element;
 const {
-    InspectorControls,
-    PanelColorSettings,
-    ContrastChecker
+    InspectorControls
   } = wp.editor;
 
   const {
     PanelBody,
-    RangeControl,
-    TextControl
+    TextareaControl,
+    TextControl,
   } = wp.components;
 
 export default class Inspector extends Component {
     render() {
         const { attributes, setAttributes } = this.props;
-        const { latitude, longitude} = attributes;
+        const { latitude, longitude, content } = attributes;
         return (
             <InspectorControls>
                 <PanelBody title={__('Controles', 'lcb')} initialOpen={true}>
@@ -34,6 +32,13 @@ export default class Inspector extends Component {
                         value={longitude}
                     />
 
+                </PanelBody>
+                <PanelBody>
+                    <TextareaControl 
+                    label={__('Contenido del tooltip', 'lcb')}
+                        onChange={ content => setAttributes({content})}
+                        value={content}
+                    />
                 </PanelBody>
 
             </InspectorControls>

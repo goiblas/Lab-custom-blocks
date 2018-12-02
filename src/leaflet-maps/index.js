@@ -19,24 +19,23 @@ export default registerBlockType(  'lcb/leaflet-map', {
     attributes: {
         latitude: {
             type: "number",
+            default: "40.416775"
         },
         longitude: {
-            type: "number"
+            type: "number",
+            default: "-3.703790"
         },
-        aspectRatio: {
+        content: {
             type: 'string',
-            default: '2_1'
+            default: 'Madrid'
         }
 
     },
     edit: props => {
-        const { attributes } = props;
-        const { latitude, longitude} = attributes;
         return (
-            <Fragment>
+            <Fragment> 
                 <Inspector {...props}/>
-                <div>{latitude} - {longitude}</div>
-                <LeafletMap />
+                <LeafletMap {...props}/> 
             </Fragment>
         )
     },

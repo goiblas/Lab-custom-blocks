@@ -1,11 +1,7 @@
-<!-- <script src=""></script>
-<link rel="stylesheet" href="" /> -->
-
 <?php
 if (! defined('ABSPATH')) {
     exit;
 }
-
 
 function lcb_leaflet_map_enqueue_assets() {
 	$style_path = 'https://unpkg.com/leaflet@1.0.2/dist/leaflet.css';
@@ -34,28 +30,30 @@ add_action('plugins_loaded', 'lcb_register_leaflet_map_block');
 
 function lcb_render_leaflet_map($settings) {
 
-	// latitute: {
-	// 	type: "number",
-	// },
-	// longitude: {
-	// 	type: "number"
-	// },
-	// aspectRatio: {
-	// 	type: 'string',
-	// 	default: '2_1'
-	// }
+	// defualt value is not the settings :(
+	$latitude = $settings['latitude'] ? $settings['latitude'] : '40.416775';
+	$longitude = $settings['longitude'] ? $settings['longitude']:  '-3.703790';
+	$content = $settings['content'];
 
+	$id = uniqid('lcb_');
+	$output .= '<div id=\''. $id .'\'></div>';
+	$output .= '
+		<script>
+		var map = L.map(\''. $id .'\').setView([' . $latitude . ', '. $longitude .'], 13);
 
-	$latitude = $settings['latitude'][0];
-	$longitude = $settings['longitude'][0];
-   
-	if ( empty( $latitude ) || empty($longitude) ) {
-		return '<p>Tienes que seleccionar coordenadas</p>';
-    }
+			L.tileLayer(\'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png\', {
+				attribution: \'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors\'
+			}).addTo(map);
+	';
 
-	$content = '<div id="mapid"></div>';
-	$content .= '<script>var mymap = L.map("mapid").setView([51.505, -0.09], 13);</script>';
+	if ( !empty( $content ) ){
+		$output .= '
+			L.marker([' . $latitude . ', '. $longitude .']).addTo(map)
+				.bindPopup(\''. $content .'\')
+				.openPopup();';
+	}
 
+	$output .= '</script>';
 	
-	return $content;
+	return $output;
 }

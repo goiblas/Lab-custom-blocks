@@ -64,16 +64,20 @@ msgstr ""
 msgid "leaflet maps block"
 msgstr ""
 
-#: src/leaflet-maps/inspector.js:21
+#: src/leaflet-maps/inspector.js:19
 msgid "Controles"
 msgstr ""
 
-#: src/leaflet-maps/inspector.js:22
+#: src/leaflet-maps/inspector.js:20
 msgid "latitude"
 msgstr ""
 
-#: src/leaflet-maps/inspector.js:29
+#: src/leaflet-maps/inspector.js:27
 msgid "longitude"
+msgstr ""
+
+#: src/leaflet-maps/inspector.js:38
+msgid "Contenido del tooltip"
 msgstr ""
 
 #: src/resizable-box/index.js:14

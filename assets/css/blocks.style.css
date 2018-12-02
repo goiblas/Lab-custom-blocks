@@ -6,3 +6,6 @@
     margin-bottom: 1.2rem; }
 #mapid {
   height: 220px; }
+
+.leaflet-container {
+  height: 220px; }

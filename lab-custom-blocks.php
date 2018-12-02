@@ -57,9 +57,9 @@ add_action( 'enqueue_block_editor_assets', 'lcb_enqueue_block_editor_assets' );
 function lcb_enqueue_assets() {
 	$style_path = '/assets/css/blocks.style.css';
 	wp_enqueue_style(
-		'lcb-blocks',
+		'lcb-css-blocks',
 		plugins_url( $style_path, __FILE__ ),
-		[ 'wp-blocks' ],
+		[],
 		filemtime(  plugin_dir_path( __FILE__ ) . $style_path )
 	);
 
