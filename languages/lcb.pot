@@ -3,6 +3,35 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "X-Generator: babel-plugin-makepot\n"
 
+#: src/collapse-panel/index.js:20
+msgid "collapse panel"
+msgstr ""
+
+#: src/collapse-panel/index.js:21
+msgid "A collapse panel"
+msgstr ""
+
+#: src/collapse-panel/index.js:28
+msgid "collapse"
+msgstr ""
+
+#: src/collapse-panel/index.js:29
+msgid "panel"
+msgstr ""
+
+#: src/collapse-panel/index.js:52
+msgid "Add title"
+msgstr ""
+
+#: src/collapse-panel/index.js:61
+#: src/collapse-panel/index.js:59
+#: src/collapse-panel/index.js:58
+#: src/collapse-panel/index.js:60
+#: src/custom-box/index.js:54
+#: src/resizable-box/edit.js:40
+msgid "Add content"
+msgstr ""
+
 #: src/custom-box/controls.js:38
 msgid "Invert colors"
 msgstr ""
@@ -13,11 +42,6 @@ msgstr ""
 
 #: src/custom-box/index.js:28
 msgid "Custom box"
-msgstr ""
-
-#: src/custom-box/index.js:54
-#: src/resizable-box/edit.js:40
-msgid "Add content"
 msgstr ""
 
 #: src/custom-box/inspector.js:24

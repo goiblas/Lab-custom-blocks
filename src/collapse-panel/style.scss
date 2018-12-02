@@ -1,0 +1,45 @@
+.wp-block-lcb-collapse-panel {
+
+}
+@mixin line() {
+    content: "";
+    width: 20px;
+    height: 2px;
+    background-color: currentColor;
+    position: absolute;
+    top: 50%;
+    left: 20px;
+}
+
+
+.lcb-cp-title {
+    padding: 15px 20px 15px 60px;
+    position: relative;
+    margin: 0;
+    cursor: pointer;
+    background-color: #ddd;
+
+    &::after {
+        @include line;
+    }
+    &::before {
+        @include line;
+        transform: rotate(90deg);
+        transition: all .25s;
+    }
+    &.opened {
+        background-color: #0073a8;
+        color: #fff;
+        & + .lcb-cp-container  {
+            max-height: var(--max-height);
+        }
+        &::before {
+            transform: rotate(180deg);
+        }
+    }
+}
+.lcb-cp-container {
+    transition: max-height .4s;
+    overflow: hidden;
+    max-height: 0;
+}

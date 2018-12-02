@@ -9,3 +9,39 @@
 
 .leaflet-container {
   height: 220px; }
+.lcb-cp-title {
+  padding: 15px 20px 15px 60px;
+  position: relative;
+  margin: 0;
+  cursor: pointer;
+  background-color: #ddd; }
+  .lcb-cp-title::after {
+    content: "";
+    width: 20px;
+    height: 2px;
+    background-color: currentColor;
+    position: absolute;
+    top: 50%;
+    left: 20px; }
+  .lcb-cp-title::before {
+    content: "";
+    width: 20px;
+    height: 2px;
+    background-color: currentColor;
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: rotate(90deg);
+    transition: all .25s; }
+  .lcb-cp-title.opened {
+    background-color: #0073a8;
+    color: #fff; }
+    .lcb-cp-title.opened + .lcb-cp-container {
+      max-height: var(--max-height); }
+    .lcb-cp-title.opened::before {
+      transform: rotate(180deg); }
+
+.lcb-cp-container {
+  transition: max-height .4s;
+  overflow: hidden;
+  max-height: 0; }
