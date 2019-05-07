@@ -24,9 +24,6 @@ msgid "Add title"
 msgstr ""
 
 #: src/collapse-panel/index.js:61
-#: src/collapse-panel/index.js:59
-#: src/collapse-panel/index.js:58
-#: src/collapse-panel/index.js:60
 #: src/custom-box/index.js:54
 #: src/resizable-box/edit.js:40
 msgid "Add content"
